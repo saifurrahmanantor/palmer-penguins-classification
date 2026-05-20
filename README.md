@@ -19,7 +19,7 @@ The goal was to build and compare two classification models on the [Palmer Pengu
 | Model | Accuracy |
 |---|---|
 | k-Nearest Neighbors (k=5) | ~82% |
-| Decision Tree | 100% |
+| Decision Tree | ~98% |
 
 ✅ **Winner: Decision Tree**
 

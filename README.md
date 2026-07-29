@@ -1,4 +1,4 @@
-#Palmer Penguins Species Classification
+# Palmer Penguins Species Classification
 
 A supervised machine learning project that classifies penguin species — **Adelie**, **Chinstrap**, and **Gentoo** — from physical body measurements, comparing k-Nearest Neighbors and Decision Tree classifiers.
 

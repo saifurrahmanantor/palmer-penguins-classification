@@ -1,68 +1,67 @@
-# 🐧 Palmer Penguins Classification
+#Palmer Penguins Species Classification
 
-A machine learning project that classifies penguin species — **Adelie**, **Chinstrap**, and **Gentoo** — based on physical measurements, built as a capstone project for a Python & Machine Learning workshop.
+A supervised machine learning project that classifies penguin species — **Adelie**, **Chinstrap**, and **Gentoo** — from physical body measurements, comparing k-Nearest Neighbors and Decision Tree classifiers.
 
-## 📌 Project Overview
+## Overview
 
-The goal was to build and compare two classification models on the [Palmer Penguins dataset](https://github.com/allisonhorst/palmerpenguins) and evaluate which one performs better at predicting penguin species from body measurements.
+This project builds and evaluates two classification models on the Palmer Penguins dataset to determine which approach most accurately predicts penguin species from morphological features. It was developed as a capstone project for a Python & Machine Learning workshop at the University of Dhaka.
 
-## 📂 Dataset
+## Dataset
 
-- **Source:** `seaborn.load_dataset('penguins')`
-- **344 rows**, 7 columns
-- **Features used:** `bill_length_mm`, `bill_depth_mm`, `flipper_length_mm`, `body_mass_g`
-- **Target:** `species` (Adelie, Chinstrap, Gentoo)
-- **Preprocessing:** Dropped 11 rows with missing values → 333 clean rows
+| | |
+|---|---|
+| **Source** | `seaborn.load_dataset('penguins')` |
+| **Raw size** | 344 rows × 7 columns |
+| **Clean size** | 333 rows (11 rows with missing values dropped) |
+| **Features** | `bill_length_mm`, `bill_depth_mm`, `flipper_length_mm`, `body_mass_g` |
+| **Target** | `species` (Adelie, Chinstrap, Gentoo) |
 
-## 🔬 Models Trained
+## Methodology
+
+1. **Data cleaning** — removed rows with missing values
+2. **Exploratory analysis** — visualized feature distributions and species separability
+3. **Model training** — trained k-NN and Decision Tree classifiers on a train/test split
+4. **Evaluation** — compared accuracy and inspected feature importance
+
+## Results
 
 | Model | Accuracy |
 |---|---|
 | k-Nearest Neighbors (k=5) | ~82% |
-| Decision Tree | ~98% |
+| **Decision Tree** | **~98%** |
 
-✅ **Winner: Decision Tree**
+**Best model: Decision Tree**, which correctly classified nearly all test-set observations.
 
----
+### Key Findings
 
-## 📊 Key Findings
+- The Decision Tree achieved near-perfect classification on the held-out test set.
+- **Flipper length** emerged as the single strongest predictor of species.
+- k-NN performed respectably (~82%) even without feature scaling, though it lagged behind the Decision Tree.
 
-- The **Decision Tree** perfectly classified all penguin species on the test set
-- The most important feature was **flipper length** — the single strongest predictor of species
-- **k-NN** still performed well at ~82% without any feature scaling
-
----
-
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 palmer-penguins-classification/
-│
-├── Project.ipynb       # Main Jupyter Notebook (all 3 phases)
+├── Project.ipynb    # Full analysis: data prep, EDA, modeling, evaluation
 └── README.md
 ```
 
----
-
-## 🚀 How to Run
+## Getting Started
 
 1. Open [Google Colab](https://colab.research.google.com)
 2. Upload `Project.ipynb`
-3. Click **Runtime → Run all**
+3. Run **Runtime → Run all**
 
-No extra installs needed — all libraries (`pandas`, `seaborn`, `scikit-learn`, `matplotlib`) are pre-installed in Colab.
+No installation required — `pandas`, `seaborn`, `scikit-learn`, and `matplotlib` are pre-installed in Colab.
 
----
+## Tech Stack
 
-## 🛠️ Libraries Used
+- **pandas** — data loading and cleaning
+- **seaborn** — dataset access and visualization
+- **scikit-learn** — model training and evaluation
+- **matplotlib** — charting
 
-- `pandas` — data loading and cleaning
-- `seaborn` — dataset and visualisation
-- `scikit-learn` — model training and evaluation
-- `matplotlib` — charts and plots
+## Author
 
----
-
-## 📧 Submission
-
-Project submitted as part of the Machine Learning Capstone at **University of Dhaka**.
+Saifur Rahman Antor — BSc Applied Mathematics, University of Dhaka
+[GitHub](https://github.com/saifurrahmanantor)
